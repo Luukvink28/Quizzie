@@ -1,0 +1,136 @@
+body{
+    background: linear-gradient(-45deg, black, White, #C8BFBF, #ED1818);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    min-height: 6.5em;
+    background: rgba(128, 128, 128, 0.5);
+    border: white solid 2px;
+    border-radius: 0.6em;
+    width: 99%;
+}
+.button {
+    background-color: #ED1818;
+    border: white solid 2px;
+    color: white;
+    padding: 0.8% 2.5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 100%;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    float: right;
+    margin-top: 1.5em;
+    overflow: hidden;
+    margin-right: 3em;
+    transition: 0.7s;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+}
+.button:hover {
+    background-color: #C8BFBF;
+    color: black;
+    border: 2px solid black;
+    font-size: 1.2em;
+}
+.logo {
+    float: left;
+    margin-left: 2em;
+    overflow: hidden;
+    max-width: 8em;
+    margin-top: 1.2em;
+    border-radius: 0.6em;
+    border: white solid 2px;
+    transition: 0.7s;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+}
+.logo:hover {
+    border: 2px solid black;
+    max-width: 9em;
+}
+.q1{
+    background: transparent;
+    overflow: hidden;
+    max-width: 99%;
+    margin-top: 7.7em;
+    padding: 1.5em;
+    border-radius: 0.6em;
+    border: white solid 2px;
+}
+.t1{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    max-width: 32em;
+    background-color: #ED1818;
+    padding: 1.5em;
+    border-radius: 0.6em;
+    border: white solid 2px;
+    transition: 0.7s;
+    float: left;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+}
+.t1:hover {
+    background-color: #C8BFBF;
+    color: black;
+    border: 2px solid black;
+    font-size: 1.6em;
+}
+.f1{
+    float: right;
+}
+.f1 img {
+    max-width: 40em;
+    overflow: hidden;
+    border-radius: 0.6em;
+    border: white solid 2px;
+    transition: 0.7s;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+}
+.f1 img:hover {
+    border: 2px solid black;
+    max-width: 45em;
+}
+.b1{
+    background-color: #ED1818;
+    border: white solid 2px;
+    color: white;
+    padding: 0.8% 2.5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 100%;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 1s;
+    clear: both;
+    float: left;
+    margin-top: 2em;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+    font-weight: bold;
+}
+.b1:hover{
+    background-color: #C8BFBF;
+    color: black;
+    border: 2px solid black;
+    font-size: 1.5em;
+}
