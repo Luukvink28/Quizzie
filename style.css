@@ -22,7 +22,7 @@ body{
     top: 0;
     z-index: 11;
     min-height: 6.5em;
-    background: rgba(128, 128, 128, 0.5);
+    background: transparent;
     border: white solid 2px;
     border-radius: 0.6em;
     width: 99%;
@@ -62,10 +62,6 @@ body{
     transition: 0.7s;
     box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
 }
-.logo:hover {
-    border: 2px solid black;
-    max-width: 9em;
-}
 .q1{
     background: transparent;
     overflow: hidden;
@@ -88,12 +84,6 @@ body{
     float: left;
     box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
 }
-.t1:hover {
-    background-color: #C8BFBF;
-    color: black;
-    border: 2px solid black;
-    font-size: 1.6em;
-}
 .f1{
     float: right;
 }
@@ -104,10 +94,6 @@ body{
     border: white solid 2px;
     transition: 0.7s;
     box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
-}
-.f1 img:hover {
-    border: 2px solid black;
-    max-width: 45em;
 }
 .b1{
     background-color: #ED1818;
@@ -132,5 +118,132 @@ body{
     background-color: #C8BFBF;
     color: black;
     border: 2px solid black;
+    font-size: 1.2em;
+}
+.q2{
+    background: transparent;
+    overflow: hidden;
+    max-width: 99%;
+    margin-top: 1em;
+    padding: 1.5em;
+    border-radius: 0.6em;
+    border: white solid 2px;
+}
+.t2{
     font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    max-width: 32em;
+    background-color: #ED1818;
+    padding: 1.5em;
+    border-radius: 0.6em;
+    border: white solid 2px;
+    transition: 0.7s;
+    float: right;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+}
+.f2{
+    float: left;
+}
+.f2 img {
+    max-width: 40em;
+    overflow: hidden;
+    border-radius: 0.6em;
+    border: white solid 2px;
+    transition: 0.7s;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+}
+.b2{
+    background-color: #ED1818;
+    border: white solid 2px;
+    color: white;
+    padding: 0.8% 2.5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 100%;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 1s;
+    clear: both;
+    float: right;
+    margin-top: 2em;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+    font-weight: bold;
+}
+.b2:hover{
+    background-color: #C8BFBF;
+    color: black;
+    border: 2px solid black;
+    font-size: 1.2em;
+}
+.q3{
+    background: transparent;
+    overflow: hidden;
+    max-width: 99%;
+    margin-top: 1em;
+    padding: 1.5em;
+    border-radius: 0.6em;
+    border: white solid 2px;
+}
+.t3{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    max-width: 32em;
+    background-color: #ED1818;
+    padding: 1.5em;
+    border-radius: 0.6em;
+    border: white solid 2px;
+    transition: 0.7s;
+    float: left;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+}
+.f3{
+    float: right;
+}
+.f3 img{
+    max-width: 40em;
+    overflow: hidden;
+    border-radius: 0.6em;
+    border: white solid 2px;
+    transition: 0.7s;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+}
+.b3{
+    background-color: #ED1818;
+    border: white solid 2px;
+    color: white;
+    padding: 0.8% 2.5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 100%;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 1s;
+    clear: both;
+    float: left;
+    margin-top: 2em;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+    font-weight: bold;
+}
+.b3:hover{
+    background-color: #C8BFBF;
+    color: black;
+    border: 2px solid black;
+    font-size: 1.2em;
+}
+footer{
+    background-color: #ED1818;
+    color: white;
+    padding: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 0.6em;
+    border: white solid 2px;
+    text-align: center;
+    margin-top: 1em;
 }
