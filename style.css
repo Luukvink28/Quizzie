@@ -202,3 +202,7 @@ footer{
     text-align: center;
     margin-top: 1em;
 }
+#emmet{
+    width: 30px;
+    height: auto;
+}

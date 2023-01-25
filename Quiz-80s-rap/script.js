@@ -5,6 +5,7 @@ function inleveren() {
     var q2b = document.getElementById("q2b");
     var q3c = document.getElementById("q3c");
     var q4a = document.getElementById("q4a");
+    var q5a = document.getElementById("q5a");
     if (q1c.checked) {
         goed++;
         document.getElementById("a1G").innerHTML = "Goed!";
@@ -32,6 +33,13 @@ function inleveren() {
     } else {
         fout++;
         document.getElementById("a4F").innerHTML = "Fout! Het juiste antwoord was A";
+    }
+    if (q5a.checked) {
+        goed++;
+        document.getElementById("a5G").innerHTML = "Goed!";
+    } else {
+        fout++;
+        document.getElementById("a5F").innerHTML = "Fout! Het juiste antwoord was A";
     }
     document.getElementById("resultaten").innerHTML = "Goed: " + goed + "<br>Fout: " + fout;
     document.getElementById("inleverButton").style.display = "none";
