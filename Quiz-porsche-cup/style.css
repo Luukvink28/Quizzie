@@ -10,9 +10,10 @@ h1 {
     margin-top: 20px;
     font-size: 1.2em;
 }
-.result {
+#result {
     text-align: center;
     font-size: medium;
+    width: 100%;
 }
 form {
     margin: 0 auto;
