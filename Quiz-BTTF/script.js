@@ -39,5 +39,5 @@ function inleveren() {
 }
 
 function reset() {
-    document.location.reset();
+    window.location.reload();
 }
