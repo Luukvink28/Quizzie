@@ -17,51 +17,6 @@ body{
 		background-position: 0% 50%;
 	}
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    z-index: 11;
-    min-height: 6.5em;
-    background: transparent;
-    border: white solid 2px;
-    border-radius: 0.6em;
-    width: 99%;
-}
-.button {
-    background-color: #ED1818;
-    border: white solid 2px;
-    color: white;
-    padding: 0.8% 2.5%;
-    text-align: center;
-    text-decoration: none;
-    font-size: 100%;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    float: right;
-    margin-top: 1.5em;
-    overflow: hidden;
-    margin-right: 3em;
-    transition: 0.7s;
-    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
-}
-.button:hover {
-    background-color: #C8BFBF;
-    color: black;
-    border: 2px solid black;
-    font-size: 1.2em;
-}
-.logo {
-    float: left;
-    margin-left: 2em;
-    overflow: hidden;
-    max-width: 8em;
-    margin-top: 1.2em;
-    border-radius: 0.6em;
-    border: white solid 2px;
-    transition: 0.7s;
-    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
-}
 .q1{
     background: transparent;
     overflow: hidden;
