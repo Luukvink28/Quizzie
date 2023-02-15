@@ -169,6 +169,8 @@
 
   .logo{
     float: left;
+    margin-left: 20px;
+    margin-top: 20px;
   }  
     .logo img{
         max-width: 30%;
@@ -179,5 +181,5 @@
         width: 100%;
     }
     .leeg{
-        color: white;
+        color: transparent;
     }

@@ -1,19 +1,28 @@
 body {
-    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
 }
 h1 {
     text-align: center;
     margin-top: 50px;
 }
-.question {
+#vraag {
     margin-top: 20px;
     font-size: 1.2em;
 }
-#result {
+#resultaten {
     text-align: center;
     font-size: medium;
-    width: 100%;
+}
+#a1G, #a2G, #a3G, #a4G, #a5G, #a6G, #a7G, #a8G, #a9G, #a10G, #a11G, #a12G, #a13G, #a14G, #a15G {
+    color: #4CAF50;
+    font-size: medium;
+}
+#a1F, #a2F, #a3F, #a4F, #a5F, #a6F, #a7F, #a8F, #a9F, #a10F, #a11F, #a12F, #a13F, #a14F, #a15F {
+    color: #ED1818;
+    font-size: medium;
+}
+#resetButton {
+    display: none;
 }
 form {
     margin: 0 auto;
@@ -22,12 +31,11 @@ form {
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 10px #ccc;
-    margin-top: 10em;
 }
 input[type="radio"] {
     margin-right: 10px;
 }
-.but {
+input[type="button"] {
     display: block;
     margin: 30px auto;
     padding: 10px 20px;
@@ -38,7 +46,7 @@ input[type="radio"] {
     cursor: pointer;
     transition: 0.3s;
 }
-.but:hover {
+input[type="button"]:hover {
     background-color: #C8BFBF;
     transition: 0.3s;
 }
@@ -52,4 +60,7 @@ input[type="radio"] {
     height: 100%;
 
     z-index: -1;
+}
+#titel{
+    color: white;
 }
