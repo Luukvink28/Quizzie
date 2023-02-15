@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $to = "jljnootenboom@gmail.com";
+    $to = "quizzieemmet@gmail.com";
     $subject = "Quizzie - Nieuw bericht";
     $message = "Er is een nieuw bericht: " . $_POST['message'] . " Het email adres is: " . $_POST['email'] . " De naam is: " . $_POST['name'];
     $headers = "Van: " . $_POST['email'];
