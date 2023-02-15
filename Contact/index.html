@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizzie - BTTF</title>
+    <title>Quizzie - Contact</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../body.css">
 </head>
 <body>
-  <img src="./delorean.jpg" alt="" class="img-background">
   <div class="nav">
     <div class="logo">
       <a href="../index.html">
@@ -26,7 +25,6 @@
       <li><a href="../Quiz-porsche-cup/index.html">Quiz1</a></li>
       <li><a href="../Quiz-80s-rap/index.html">Quiz2</a></li>
       <li><a href="../Quiz-BTTF/index.html">Quiz3</a></li>
-      <li><a href="#">Contact</a></li>
       </ul>
       </div>
       </div>
@@ -34,12 +32,18 @@
   <div class="leeg">
     hi
   </div>
-    <h1>Quizzie - Back to the Future</h1>
-    <form>
-      
-      <input type="button" value="Inleveren" id="inleverButton" onclick="inleveren()">
-      <input type="button" value="Opnieuw Maken" id="resetButton" onclick="window.location.reload()">
-      <p id="resultaten"></p>
+    <h1>Contact</h1>
+    <form method="post" action="Email.php">
+      <label for="name">Naam:</label><br>
+      <input type="text" id="name" name="name" placeholder="Uw naam">
+      <br><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="Uw email">
+      <br><br>
+      <label for="message">Bericht:</label><br>
+      <textarea id="message" name="message" placeholder="Uw bericht"></textarea>
+      <br><br>
+      <input id="button" type="submit" value="Versturen">
     </form>
     <script src="script.js"></script>
 </body>
