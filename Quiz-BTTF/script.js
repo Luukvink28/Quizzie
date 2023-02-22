@@ -1,127 +1,192 @@
-function inleveren() {
-    var goed = 0;
-    var fout = 0;
-    var q1a = document.getElementById("q1a");
-    var q2b = document.getElementById("q2b");
-    var q3a = document.getElementById("q3a");
-    var q4c = document.getElementById("q4c");
-    var q5a = document.getElementById("q5a");
-    var q6b = document.getElementById("q6b");
-    var q7a = document.getElementById("q7a");
-    var q8c = document.getElementById("q8c");
-    var q9c = document.getElementById("q9c");
-    var q10a = document.getElementById("q10a");
-    var q11 = document.getElementById("q11");
-    var q12 = document.getElementById("q12");
-    var q13 = document.getElementById("q13");
-    var q14 = document.getElementById("q14");
-    var q15 = document.getElementById("q15");
-    if (q1a.checked) {
-        goed++;
-        document.getElementById("a1G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a1F").innerHTML = "Fout! Het juiste antwoord was A";
+// select all elements
+const start = document.getElementById("start");
+const quiz = document.getElementById("quiz");
+const question = document.getElementById("question");
+const choiceA = document.getElementById("A");
+const choiceB = document.getElementById("B");
+const choiceC = document.getElementById("C");
+const choiceD = document.getElementById("D");
+const counter = document.getElementById("counter");
+const timeGauge = document.getElementById("timeGauge");
+const progress = document.getElementById("progress");
+const scoreDiv = document.getElementById("scoreContainer");
+
+// create our questions
+let questions = [
+    {
+        question : "Hoe heet de acteur van Marty McFly?",
+        choiceA : "A)Michael J. Fox ",
+        choiceB : "B)Tom Cruise",
+        choiceC : "C)Christopher Lloyd",
+        correct : "A"
+
+    },{
+        question : "Hoe heet de acteur van Doc Brown?",
+        choiceA : "A)Sylvester Stallone",
+        choiceB : "B)Christopher Lloyd",
+        choiceC : "C)Michael J. Fox",
+        correct : "B"
+    },{
+        question : "Welke auto gebruiken Doc & Marty om terug te gaan in de tijd?",
+        choiceA : "A)DeLorean DMC-12",
+        choiceB : "B)Ford Mustang",
+        choiceC : "C)Chevrolet Camaro",
+        correct : "A"
+      },{
+        question : "In welk jaar speelt de film Back to the Future 2 zich af?",
+        choiceA : "A)1955",
+        choiceB : "B)1985",
+        choiceC : "C)2015",
+        correct : "C"
+      },{
+        question : "Welke stad komt het meeste voor in de films?",
+        choiceA : "A)Hill Valley",
+        choiceB : "B)Hill Town",
+        choiceC : "C)Hillsburg",
+        correct : "A"
+      },{
+        question:  "Met wat heeft Doc tijdreizen mogelijk gemaakt?",
+        choiceA : "A)Tijdschakelaar",
+        choiceB : "B)Flux capacitor",
+        choiceC : "C)Kernenergie",
+        correct : "B"
+      },{
+        question:  "Hoe snel moet de auto gaan om te kunnen tijdreizen",
+        choiceA : "A)88MPH",
+        choiceB : "B)69MPH",
+        choiceC : "C)99MPH",
+        correct : "A"
+      },{
+        question:  "Hoe heet de vriendin van Marty?",
+        choiceA : "A)Lorene",
+        choiceB : "B)Emmet",
+        choiceC : "C)Jennifer",
+        correct : "C"
+      },{
+        question:  "Hoe heet de vader van Marty?",
+        choiceA : "A)Biff",
+        choiceB : "B)Needles",
+        choiceC : "C)George",
+        correct : "C"
+      },{
+        question:  "Wat zegt Doc als hij verbaasd is?",
+        choiceA : "A)Great Scott!",
+        choiceB : "B)Butthead",
+        choiceC : "C)Chicken",
+        correct : "A"
     }
-    if (q2b.checked) {
-        goed++;
-        document.getElementById("a2G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a2F").innerHTML = "Fout! Het juiste antwoord was B";
+];
+
+// create some variables
+
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+let count = 0;
+const questionTime = 300; // 5min
+const gaugeWidth = 150; // 150px
+const gaugeUnit = gaugeWidth / questionTime;
+let TIMER;
+let score = 0;
+
+// render a question
+function renderQuestion(){
+    let q = questions[runningQuestion];
+
+    question.innerHTML = "<p>"+ q.question +"</p>";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+    choiceD.innerHTML = q.choiceD;
+}
+
+start.addEventListener("click",startQuiz);
+
+// start quiz
+function startQuiz(){
+    start.style.display = "none";
+    renderQuestion();
+    quiz.style.display = "block";
+    renderProgress();
+    renderCounter();
+    TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
+}
+
+// render progress
+function renderProgress(){
+    for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
+        progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
     }
-    if (q3a.checked) {
-        goed++;
-        document.getElementById("a3G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a3F").innerHTML = "Fout! Het juiste antwoord was A";
+}
+
+// counter render
+
+function renderCounter(){
+    if(count <= questionTime){
+        counter.innerHTML = count;
+        timeGauge.style.width = count * gaugeUnit + "px";
+        count++
+    }else{
+        count = 0;
+        // change progress color to red
+        answerIsWrong();
+        if(runningQuestion < lastQuestion){
+            runningQuestion++;
+            renderQuestion();
+        }else{
+            // end the quiz and show the score
+            clearInterval(TIMER);
+            scoreRender();
+        }
     }
-    if (q4c.checked) {
-        goed++;
-        document.getElementById("a4G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a4F").innerHTML = "Fout! Het juiste antwoord was C";
+}
+
+// checkAnwer
+
+function checkAnswer(answer){
+    if( answer == questions[runningQuestion].correct){
+        // answer is correct
+        score++;
+        // change progress color to green
+        answerIsCorrect();
+    }else{
+        // answer is wrong
+        // change progress color to red
+        answerIsWrong();
     }
-    if (q5a.checked) {
-        goed++;
-        document.getElementById("a5G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a5F").innerHTML = "Fout! Het juiste antwoord was A";
+    count = 0;
+    if(runningQuestion < lastQuestion){
+        runningQuestion++;
+        renderQuestion();
+    }else{
+        // end the quiz and show the score
+        clearInterval(TIMER);
+        scoreRender();
     }
-    if (q6b.checked) {
-        goed++;
-        document.getElementById("a6G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a6F").innerHTML = "Fout! Het juiste antwoord was B";
-    }
-    if (q7a.checked) {
-        goed++;
-        document.getElementById("a7G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a7F").innerHTML = "Fout! Het juiste antwoord was A";
-    }
-    if (q8c.checked) {
-        goed++;
-        document.getElementById("a8G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a8F").innerHTML = "Fout! Het juiste antwoord was C";
-    }
-    if (q9c.checked) {
-        goed++;
-        document.getElementById("a9G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a9F").innerHTML = "Fout! Het juiste antwoord was C";
-    }
-    if (q10a.checked) {
-        goed++;
-        document.getElementById("a10G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a10F").innerHTML = "Fout! Het juiste antwoord was A";
-    }
-    if (q11.value == "emmet" || q11.value == "Emmet") {
-        goed++;
-        document.getElementById("a11G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a11F").innerHTML = "Fout! Het juiste antwoord was Emmet";
-    }
-    if (q12.value == "Twin Pines Mall" || q12.value == "twin pines mall") {
-        goed++;
-        document.getElementById("a12G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a12F").innerHTML = "Fout! Het juiste antwoord was Twin Pines Mall";
-    }
-    if (q13.value == "Einstein" || q13.value == "einstein") {
-        goed++;
-        document.getElementById("a13G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a13F").innerHTML = "Fout! Het juiste antwoord was Einstein";
-    }
-    if (q14.value == "Johnny B. Goode" || q14.value == "Johnny B Goode") {
-        goed++;
-        document.getElementById("a14G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a14F").innerHTML = "Fout! Het juiste antwoord was Johnny B. Goode";
-    }
-    if (q15.value == "The Starlighters" || q15.value == "the starlighters") {
-        goed++;
-        document.getElementById("a15G").innerHTML = "Goed!";
-    } else {
-        fout++;
-        document.getElementById("a15F").innerHTML = "Fout! Het juiste antwoord was The Starlighters";
-    }
-    document.getElementById("resultaten").innerHTML = "Goed: " + goed + "<br>Fout: " + fout;
-    document.getElementById("inleverButton").style.display = "none";
-    document.getElementById("resetButton").style.display = "block";
+}
+
+// answer is correct
+function answerIsCorrect(){
+    document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
+}
+
+// answer is Wrong
+function answerIsWrong(){
+    document.getElementById(runningQuestion).style.backgroundColor = "#f00";
+}
+
+// score render
+function scoreRender(){
+    scoreDiv.style.display = "block";
+
+    // calculate the amount of question percent answered by the user
+    const scorePerCent = Math.round(100 * score/questions.length);
+
+    // choose the image based on the scorePerCent
+    let img = (scorePerCent >= 80) ? "img/5.png" :
+              (scorePerCent >= 60) ? "img/4.png" :
+              (scorePerCent >= 40) ? "img/3.png" :
+              (scorePerCent >= 20) ? "img/2.png" :
+              "img/1.png";
+
+    scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }

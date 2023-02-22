@@ -9,130 +9,41 @@
     <link rel="stylesheet" href="../body.css">
 </head>
 <body>
-  <div class="nav">
-    <div class="logo">
-      <a href="../index.html">
-        <img src="../logo.png" alt="logo">
-      </a>
+  <header id="nav-wrapper">
+    <nav id="nav">
+      <div class="nav left">
+        <span class="gradient skew"><h1 class="logo un-skew"><a href="../index.html"><img class="logo" src="../logo.png" alt=""></a></h1></span>
+        <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+      </div>
+      <div class="nav right">
+        <a href="../Quiz-porsche-cup/index.html" class="nav-link active"><span class="nav-link-span"><span class="u-nav">Quiz porsche cup</span></span></a>
+        <a href="../Quiz-80s-rap/index.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">Quiz 80s rap</span></span></a>
+        <a href="index.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">Quiz BTTF</span></span></a>
+        <a href="../contact.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">Contact</span></span></a>
+      </div>
+    </nav>
+  </header>
+  <img src="https://deadline.com/wp-content/uploads/2022/07/1A26A865-13F9-4E64-87D3-DC7845F3F4BD.jpeg" alt="" srcset="" class="img-background">
+<div id="container">
+  <div id="start">
+    <p> Start <br> Quiz!</p></div>
+    <div id="quiz" style="display: none">
+        <div id="question"></div>
+        <div id="choices">
+            <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+            <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+            <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+        </div>
+        <div id="timer">
+            <div id="counter"></div>
+            <div id="btimeGauge"></div>
+            <div id="timeGauge"></div>
+        </div>
+        <div id="progress"></div>
     </div>
-      <div class="nav-links">
-          <input type="checkbox" id="active">
-          <label onclick="hideRadio()" for="active" class="menu-btn"><span></span></label>
-          <label for="active" class="close"></label>
-          <div class="wrapper">
-            <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../Quiz-porsche-cup/index.html">Quiz1</a></li>
-      <li><a href="../Quiz-80s-rap/index.html">Quiz2</a></li>
-      <li><a href="../Quiz-BTTF/index.html">Quiz3</a></li>
-      </ul>
-      </div>
-      </div>
-  </div>
-  <div class="leeg">
-    hi
-  </div>
-    <h1>Quizzie - Back to the Future</h1>
-    <form>
-      <p id="vraag">1. Hoe heet de acteur van Marty McFly?</p>
-      <input type="radio" name="question1" value="A" id="q1a">A. Michael J. Fox<br>
-      <input type="radio" name="question1" value="B" id="q1b">B. Tom Cruise<br>
-      <input type="radio" name="question1" value="C" id="q1c">C. Christopher Lloyd<br>
-      <p id="a1G"></p>
-      <p id="a1F"></p>
-
-      <p id="vraag">2. Hoe heet de acteur van Doc Brown?</p>
-      <input type="radio" name="question2" value="A" id="q2a">A. Sylvester Stallone<br>
-      <input type="radio" name="question2" value="B" id="q2b">B. Christopher Lloyd<br>
-      <input type="radio" name="question2" value="C" id="q2c">C. Michael J. Fox<br>
-      <p id="a2G"></p>
-      <p id="a2F"></p>
-  
-      <p id="vraag">3. Welke auto gebruiken Doc & Marty om terug te gaan in de tijd?</p>
-      <input type="radio" name="question3" value="A" id="q3a">A. DeLorean DMC-12<br>
-      <input type="radio" name="question3" value="B" id="q3b">B. Ford Mustang<br>
-      <input type="radio" name="question3" value="C" id="q3c">C. Chevrolet Camaro<br>
-      <p id="a3G"></p>
-      <p id="a3F"></p>
-  
-      <p id="vraag">4. In welk jaar speelt de film Back to the Future 2 zich af?</p>
-      <input type="radio" name="question4" value="A" id="q4a">A. 1955<br>
-      <input type="radio" name="question4" value="B" id="q4b">B. 1985<br>
-      <input type="radio" name="question4" value="C" id="q4c">C. 2015<br>
-      <p id="a4G"></p>
-      <p id="a4F"></p>
-
-      <p id="vraag">5. Welke stad komt het meeste voor in de films?</p>
-      <input type="radio" name="question5" value="A" id="q5a">A. Hill Valley<br>
-      <input type="radio" name="question5" value="B" id="q5b">B. Hill Town<br>
-      <input type="radio" name="question5" value="C" id="q5c">C. Hillsburg<br>
-      <p id="a5G"></p>
-      <p id="a5F"></p>
-  
-      <p id="vraag">6. Met wat heeft Doc tijdreizen mogelijk gemaakt?</p>
-      <input type="radio" name="question6" value="A" id="q6a">A. Tijdschakelaar<br>
-      <input type="radio" name="question6" value="B" id="q6b">B. Flux capacitor<br>
-      <input type="radio" name="question6" value="C" id="q6c">C. Kernenergie<br>
-      <p id="a6G"></p>
-      <p id="a6F"></p>
-
-      <p id="vraag">7. Hoe snel moet de auto gaan om te kunnen tijdreizen?</p>
-      <input type="radio" name="question7" value="A" id="q7a">A. 88MPH<br>
-      <input type="radio" name="question7" value="B" id="q7b">B. 69MPH<br>
-      <input type="radio" name="question7" value="C" id="q7c">C. 99MPH<br>
-      <p id="a7G"></p>
-      <p id="a7F"></p>
-
-      <p id="vraag">8. Hoe heet de vriendin van Marty?</p>
-      <input type="radio" name="question8" value="A" id="q8a">A. Lorene<br>
-      <input type="radio" name="question8" value="B" id="q8b">B. Emmet<br>
-      <input type="radio" name="question8" value="C" id="q8c">C. Jennifer<br>
-      <p id="a8G"></p>
-      <p id="a8F"></p>
-
-      <p id="vraag">9. Hoe heet de vader van Marty?</p>
-      <input type="radio" name="question9" value="A" id="q9a">A. Biff<br>
-      <input type="radio" name="question9" value="B" id="q9b">B. Needles<br>
-      <input type="radio" name="question9" value="C" id="q9c">C. George<br>
-      <p id="a9G"></p>
-      <p id="a9F"></p>
-
-      <p id="vraag">10. Wat zegt Doc als hij verbaasd is?</p>
-      <input type="radio" name="question10" value="A" id="q10a">A. Great Scott!<br>
-      <input type="radio" name="question10" value="B" id="q10b">B. Butthead<br>
-      <input type="radio" name="question10" value="C" id="q10c">C. Chicken<br>
-      <p id="a10G"></p>
-      <p id="a10F"></p>
-
-      <p id="vraag">11. Wat is de voornaam van Doc Brown?</p>
-      <input type="text" name="question11" id="q11"><br>
-      <p id="a11G"></p>
-      <p id="a11F"></p>
-
-      <p id="vraag">12. Hoe heet de parkeerplaats waar Doc voor het eerst de tijdmachine liet zien?</p>
-      <input type="text" name="question12" id="q12"><br>
-      <p id="a12G"></p>
-      <p id="a12F"></p>
-
-      <p id="vraag">13. Hoe heet de hond van Doc Brown aan het begin van de eerste film?</p>
-      <input type="text" name="question13" id="q13"><br>
-      <p id="a13G"></p>
-      <p id="a13F"></p>
-
-      <p id="vraag">14. Welk lied speelde Marty op het bal in 1955?</p>
-      <input type="text" name="question14" id="q14"><br>
-      <p id="a14G"></p>
-      <p id="a14F"></p>
-
-      <p id="vraag">15. Wat was de naam van de band die speelde op het bal in 1955?</p>
-      <input type="text" name="question15" id="q15"><br>
-      <p id="a15G"></p>
-      <p id="a15F"></p>
-
-      <input type="button" value="Inleveren" id="inleverButton" onclick="inleveren()">
-      <input type="button" value="Opnieuw Maken" id="resetButton" onclick="window.location.reload()">
-      <p id="resultaten"></p>
-    </form>
+    <div id="scoreContainer" style="display: none"></div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

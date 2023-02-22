@@ -7,131 +7,46 @@
     <title>Quiz Over de porsche cup!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../body.css">
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20230120/ourmid/pngtree-quiz-logo-with-speech-bubble-symbols-png-image_6568572.png">
 </head>
 <body>
-    <div class="nav">
-        <div class="logo">
-            <img src="../logo.png" alt="logo">
+    <header id="nav-wrapper">
+        <nav id="nav">
+          <div class="nav left">
+            <span class="gradient skew"><h1 class="logo un-skew"><a href="../index.html"><img class="logo" src="../logo.png" alt=""></a></h1></span>
+            <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+          </div>
+          <div class="nav right">
+            <a href="index.html" class="nav-link active"><span class="nav-link-span"><span class="u-nav">Quiz porsche cup</span></span></a>
+            <a href="../Quiz-80s-rap/index.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">Quiz 80s rap</span></span></a>
+            <a href="../Quiz-BTTF/index.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">Quiz BTTF</span></span></a>
+            <a href="../contact.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">Contact</span></span></a>
+          </div>
+        </nav>
+      </header>
+      <img src="https://www.mad4wheels.com/img/free-car-images/mobile/18562/porsche-911-992-gt3-cup-2021-613561.jpg" alt="" srcset="" class="img-background">
+    <div id="container">
+        <div id="start">
+          <p>
+          Start <br> Quiz!</div>
+        </p>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
         </div>
-        <div class="nav-links">
-            <input type="checkbox" id="active">
-            <label onclick="hideRadio()" for="active" class="menu-btn"><span></span></label>
-            <label for="active" class="close"></label>
-            <div class="wrapper">
-              <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../Quiz-porsche-cup/index.html">Quiz1</a></li>
-                <li><a href="../Quiz-80s-rap/index.html">Quiz2</a></li>
-                <li><a href="../Quiz-BTTF/index.html">Quiz3</a></li>
-        </ul>
-        </div>
-        </div>
+        <div id="scoreContainer" style="display: none"></div>
     </div>
-    <div class="leeg">
-        hi
-    </div>
-    <h1>Quizzie - Porsche Cup</h1>
-    <form>
-      <p id="vraag">1. Wat is de naam van de competitie waarin de Porsche Cup wordt gespeeld?</p>
-      <input type="radio" name="question1" value="A" id="q1a">A. Porsche Supercup<br>
-      <input type="radio" name="question1" value="B" id="q1b">B. Porsche Superleague<br>
-      <input type="radio" name="question1" value="C" id="q1c">C. Porsche Grand Prix<br>
-      <p id="a1G"></p>
-      <p id="a1F"></p>
-
-      <p id="vraag">2. Wie organiseert de Porsche Cup?</p>
-      <input type="radio" name="question2" value="A" id="q2a">A. Porsche AG<br>
-      <input type="radio" name="question2" value="B" id="q2b">B. FIA<br>
-      <input type="radio" name="question2" value="C" id="q2c">C. Mercedes-Benz<br>
-      <p id="a2G"></p>
-      <p id="a2F"></p>
-  
-      <p id="vraag">3. Wat is het doel van de Porsche Cup?</p>
-      <input type="radio" name="question3" value="A" id="q3a">A. Om de beste coureur te bepalen<br>
-      <input type="radio" name="question3" value="B" id="q3b">B. Om een kampioenschap te bemachtigen<br>
-      <input type="radio" name="question3" value="C" id="q3c">C. Om geld te verdienen<br>
-      <p id="a3G"></p>
-      <p id="a3F"></p>
-  
-      <p id="vraag">4. Welke type auto's worden gebruikt in de Porsche Cup?</p>
-      <input type="radio" name="question4" value="A" id="q4a">A. Porsche 911 GT3 Cup<br>
-      <input type="radio" name="question4" value="B" id="q4b">B. Porsche 919 Hybrid<<br>
-      <input type="radio" name="question4" value="C" id="q4c">C. Porsche 996 GT3<br>
-      <p id="a4G"></p>
-      <p id="a4F"></p>
-
-      <p id="vraag">5. Wanneer begon de Porsche Cup?</p>
-      <input type="radio" name="question5" value="A" id="q5a">A. 1991<br>
-      <input type="radio" name="question5" value="B" id="q5b">B. 1995<br>
-      <input type="radio" name="question5" value="C" id="q5c">C. 2002<br>
-      <p id="a5G"></p>
-      <p id="a5F"></p>
-  
-      <p id="vraag">6. Wat is de beste manier om een Porsche Cup-team te vormen?</p>
-      <input type="radio" name="question6" value="A" id="q6a">A. Koop een Porsche auto<br>
-      <input type="radio" name="question6" value="B" id="q6b">B. Zoek een sponser<br>
-      <input type="radio" name="question6" value="C" id="q6c">C. Vind een ervaren coureur<br>
-      <p id="a6G"></p>
-      <p id="a6F"></p>
-
-      <p id="vraag">7. Waar worden de races van de Porsche Cup gehouden?</p>
-      <input type="radio" name="question7" value="A" id="q7a">A. Op circuits over de hele wereld<br>
-      <input type="radio" name="question7" value="B" id="q7b">B. Op autocrossbanen<br>
-      <input type="radio" name="question7" value="C" id="q7c">C. Op stadswegen<br>
-      <p id="a7G"></p>
-      <p id="a7F"></p>
-
-      <p id="vraag">8. Wat is er nodig om deel te nemen aan de Porsche Cup?</p>
-      <input type="radio" name="question8" value="A" id="q8a">A. Een lange testrit<br>
-      <input type="radio" name="question8" value="B" id="q8b">B. Een hoge aanbetaling<br>
-      <input type="radio" name="question8" value="C" id="q8c">C. Een goedkeuring van een commissie<br>
-      <p id="a8G"></p>
-      <p id="a8F"></p>
-
-      <p id="vraag">9. Wat is de minimumleeftijd om deel te nemen aan de Porsche Cup?</p>
-      <input type="radio" name="question9" value="A" id="q9a">A. 14<br>
-      <input type="radio" name="question9" value="B" id="q9b">B. 16<br>
-      <input type="radio" name="question9" value="C" id="q9c">C. 18<br>
-      <p id="a9G"></p>
-      <p id="a9F"></p>
-
-      <p id="vraag">10. Hoeveel verschillende klasses zijn er in de Porsche Cup?</p>
-      <input type="radio" name="question10" value="A" id="q10a">A. 2<br>
-      <input type="radio" name="question10" value="B" id="q10b">B. 3<br>
-      <input type="radio" name="question10" value="C" id="q10c">C. 4<br>
-      <p id="a10G"></p>
-      <p id="a10F"></p>
-
-      <p id="vraag">11. Welk land heeft de meeste overwinningen in de Porsche Cup?</p>
-      <input type="text" placeholder="Type hier je antwoord" name="question11" id="q11"><br>
-      <p id="a11G"></p>
-      <p id="a11F"></p>
-
-      <p id="vraag">12. Hoeveel punten krijgt de winnaar van de Porsche Cup?</p>
-      <input type="text" placeholder="Type hier je antwoord" name="question12" id="q12"><br>
-      <p id="a12G"></p>
-      <p id="a12F"></p>
-
-      <p id="vraag">13. Wie zijn de voormalige kampioenen van de Porsche Cup?</p>
-      <input type="text" placeholder="Type hier je antwoord" name="question13" id="q13"><br>
-      <p id="a13G"></p>
-      <p id="a13F"></p>
-
-      <p id="vraag">14. Wat is de snelste rondetijd in de Porsche Cup?</p>
-      <input type="text" placeholder="Type hier je antwoord" name="question14" id="q14"><br>
-      <p id="a14G"></p>
-      <p id="a14F"></p>
-
-      <p id="vraag">15. Hoeveel coureurs nemen deel aan elke Porsche Cup-race?</p>
-      <input type="text" placeholder="Type hier je antwoord" name="question15" id="q15"><br>
-      <p id="a15G"></p>
-      <p id="a15F"></p>
-
-      <input type="button" value="Inleveren" id="inleverButton" onclick="inleveren()">
-      <input type="button" value="Opnieuw Maken" id="resetButton" onclick="window.location.reload()">
-      <p id="resultaten"></p>
-    </form>
     <script src="index.js">
     </script>
 </body>

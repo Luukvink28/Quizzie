@@ -6,6 +6,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
+.logo{
+max-width: 4em;
+margin-top: 5px;
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -17,105 +21,15 @@ body{
 		background-position: 0% 50%;
 	}
 }
-.q1{
-    background: transparent;
-    overflow: hidden;
-    max-width: 99%;
-    margin-top: 7.7em;
-    padding: 1.5em;
-    border-radius: 0.6em;
-    border: white solid 2px;
-}
-.t1{
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-    max-width: 32em;
-    background-color: #ED1818;
-    padding: 1.5em;
-    border-radius: 0.6em;
-    border: white solid 2px;
-    transition: 0.7s;
-    float: left;
-    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
-}
-.f1{
-    float: right;
-}
-.f1 img {
-    max-width: 40em;
-    overflow: hidden;
-    border-radius: 0.6em;
-    border: white solid 2px;
-    transition: 0.7s;
-    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
-}
-.b1{
+
+.button1{
     background-color: #ED1818;
     border: white solid 2px;
     color: white;
-    padding: 0.8% 2.5%;
+    padding: 5em;
     text-align: center;
     text-decoration: none;
-    font-size: 100%;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 1s;
-    clear: both;
-    float: left;
-    margin-top: 2em;
-    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
-    font-weight: bold;
-}
-.b1:hover{
-    background-color: #C8BFBF;
-    color: black;
-    border: 2px solid black;
-    font-size: 1.2em;
-}
-.q2{
-    background: transparent;
-    overflow: hidden;
-    max-width: 99%;
-    margin-top: 1em;
-    padding: 1.5em;
-    border-radius: 0.6em;
-    border: white solid 2px;
-}
-.t2{
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-    max-width: 32em;
-    background-color: #ED1818;
-    padding: 1.5em;
-    border-radius: 0.6em;
-    border: white solid 2px;
-    transition: 0.7s;
-    float: right;
-    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
-}
-.f2{
-    float: left;
-}
-.f2 img {
-    max-width: 40em;
-    overflow: hidden;
-    border-radius: 0.6em;
-    border: white solid 2px;
-    transition: 0.7s;
-    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
-}
-.b2{
-    background-color: #ED1818;
-    border: white solid 2px;
-    color: white;
-    padding: 0.8% 2.5%;
-    text-align: center;
-    text-decoration: none;
-    font-size: 100%;
+    font-size: 1.3vw;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
@@ -126,70 +40,88 @@ body{
     margin-top: 2em;
     box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
     font-weight: bold;
+    overflow: hidden;
 }
-.b2:hover{
-    background-color: #C8BFBF;
+.button1:hover{
+    background-image: url("https://files.porsche.com/filestore/image/multimedia/none/motorsport-racingcars-991-2nd-gt3-r-launch-intro/normal/9583dde4-8274-11eb-80d3-005056bbdc38/porsche-normal.jpg");
     color: black;
-    border: 2px solid black;
-    font-size: 1.2em;
-}
-.q3{
-    background: transparent;
-    overflow: hidden;
-    max-width: 99%;
-    margin-top: 1em;
-    padding: 1.5em;
-    border-radius: 0.6em;
-    border: white solid 2px;
-}
-.t3{
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-    max-width: 32em;
-    background-color: #ED1818;
-    padding: 1.5em;
-    border-radius: 0.6em;
-    border: white solid 2px;
-    transition: 0.7s;
-    float: left;
+    border: black solid 2px;
     box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+    animation: fadeIn 1s;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.f3{
-    float: right;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-.f3 img{
-    max-width: 40em;
-    overflow: hidden;
-    border-radius: 0.6em;
-    border: white solid 2px;
-    transition: 0.7s;
-    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
-}
-.b3{
+.button2{
     background-color: #ED1818;
     border: white solid 2px;
     color: white;
-    padding: 0.8% 2.5%;
+    padding: 5em;
     text-align: center;
     text-decoration: none;
-    font-size: 100%;
+    font-size: 1.3vw;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
     overflow: hidden;
     transition: 1s;
     clear: both;
-    float: left;
+    float: right;
     margin-top: 2em;
     box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
     font-weight: bold;
+    overflow: hidden;
 }
-.b3:hover{
-    background-color: #C8BFBF;
+.button2:hover{
+    background-image: url("https://bccolonels.com/wp-content/uploads/2019/09/NWA80.jpeg");
     color: black;
-    border: 2px solid black;
-    font-size: 1.2em;
+    border: black solid 2px;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+    animation: fadeIn 1s;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.button3{
+    background-color: #ED1818;
+    border: white solid 2px;
+    color: white;
+    padding: 5em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3vw;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 1s;
+    clear: both;
+    float: right;
+    margin-top: 2em;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+    font-weight: bold;
+    overflow: hidden;
+}
+.button3:hover{
+    background-image: url("https://deadline.com/wp-content/uploads/2022/07/1A26A865-13F9-4E64-87D3-DC7845F3F4BD.jpeg");
+    color: black;
+    border: black solid 2px;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(65, 65, 65, 0.5);
+    animation: fadeIn 1s;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.button{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 footer{
     background-color: #ED1818;
@@ -200,9 +132,19 @@ footer{
     border-radius: 0.6em;
     border: white solid 2px;
     text-align: center;
-    margin-top: 1em;
+    margin-top: 6%;
+    overflow: hidden;
 }
 #emmet{
     width: 30px;
     height: auto;
+}
+#emmet:hover{
+    animation: spin 1s;
+    animation-iteration-count: infinite;
+}
+.title{
+font-size: 2vw;
+margin-top: 5em;
+text-align: center;
 }
